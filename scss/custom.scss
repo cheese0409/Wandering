@@ -1,0 +1,127 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar {
+    font-weight: 300;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index:3;
+    .navbar-brand h3{
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .nav-item{
+        font-size: 1.2rem;
+    }
+
+    .nav-link:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 1px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+
+    .nav-link:hover:after {
+        width: 100%;
+        background: #f1f1f1;
+    }
+}
+
+#showcase{
+    background: url("https://images.unsplash.com/photo-1506701160839-34cfdecaf53c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") center center / cover no-repeat;
+    min-height: 500px;
+    position: relative;
+    #header{
+        z-index:2;
+    }
+    #overlay{
+        background: rgba(0,0,0,0.5);
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index:1;
+    }
+    h1{
+        font-family: 'Dancing Script', sans-serif;
+        line-height: 1;
+    }
+    #book{
+        font-size: 1.3rem;
+        border-radius: 2rem;
+    }
+}
+
+#about{
+    .img-icon{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+#explore{
+    .card-img-top {
+        width: 100%;
+        height: 30vw;
+        object-fit: cover;
+    }
+}
+
+#quotes{
+    i{
+        opacity:0.3;
+    }
+}
+
+#slider{
+    .carousel-item{
+        height: 325px;
+        img{
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            min-height: 325px;
+        }
+    }
+
+}
+
+#footer{
+    .nav-link{
+        color: #bbbbbb;
+        transition: color 0.5s;
+    }
+    .nav-link:hover{
+        color: #ffffff;
+    }
+}
+
+@media(max-width:768px){
+    .navbar{
+        background: #4B8B8E;
+        .nav-link:hover:after {
+            display: none;
+        }
+    }
+    #showcase{
+        min-height:400px;
+        h1{
+            font-size:4rem;
+        }
+    }
+    #explore{
+        .card-img-top{
+            width: 100%;
+            height: 50vw;
+            object-fit: cover;
+        }
+    }
+}
